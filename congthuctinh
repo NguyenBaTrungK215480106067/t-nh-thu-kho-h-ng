@@ -1,0 +1,34 @@
+using System;
+
+namespace IceCostCalculatorApp
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Nhập khối lượng nước đá (kg)
+            Console.Write("Nhập khối lượng nước đá (kg): ");
+            double weight = Convert.ToDouble(Console.ReadLine());
+
+            // Nhập giá tiền trên mỗi kg
+            Console.Write("Nhập giá tiền trên mỗi kg (VND): ");
+            double pricePerKg = Convert.ToDouble(Console.ReadLine());
+
+            // Tính tổng chi phí
+            double totalCost = CalculateIceCost(weight, pricePerKg);
+
+            // Hiển thị kết quả
+            Console.WriteLine($"Tổng chi phí: {totalCost} VND");
+
+            // Chờ người dùng nhấn phím để đóng ứng dụng
+            Console.WriteLine("Nhấn phím bất kỳ để thoát...");
+            Console.ReadKey();
+        }
+
+        // Phương thức tính chi phí nước đá
+        static double CalculateIceCost(double weight, double pricePerKg)
+        {
+            return weight * pricePerKg;
+        }
+    }
+}
