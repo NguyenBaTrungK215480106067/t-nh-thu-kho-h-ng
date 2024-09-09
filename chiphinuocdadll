@@ -1,0 +1,12 @@
+using System;
+
+namespace IceCostCalculator
+{
+    public class Calculator
+    {
+        public double CalculateCost(double weightInKg, double pricePerKg)
+        {
+            return weightInKg * pricePerKg;
+        }
+    }
+}
