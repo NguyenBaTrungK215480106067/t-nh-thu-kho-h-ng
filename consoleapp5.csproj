@@ -1,0 +1,33 @@
+using System;
+
+namespace TinhToanCoBan
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Nhập hai số từ người dùng
+            Console.Write("Nhập số thứ nhất: ");
+            double soThuNhat = Convert.ToDouble(Console.ReadLine());
+
+            Console.Write("Nhập số thứ hai: ");
+            double soThuHai = Convert.ToDouble(Console.ReadLine());
+
+            // Thực hiện các phép tính
+            double tong = soThuNhat + soThuHai;
+            double hieu = soThuNhat - soThuHai;
+            double tich = soThuNhat * soThuHai;
+            double thuong = soThuNhat / soThuHai;
+
+            // Hiển thị kết quả
+            Console.WriteLine("\nKết quả của các phép toán:");
+            Console.WriteLine($"{soThuNhat} + {soThuHai} = {tong}");
+            Console.WriteLine($"{soThuNhat} - {soThuHai} = {hieu}");
+            Console.WriteLine($"{soThuNhat} * {soThuHai} = {tich}");
+            Console.WriteLine($"{soThuNhat} / {soThuHai} = {thuong}");
+
+            // Đợi người dùng nhấn phím để đóng chương trình
+            Console.ReadKey();
+        }
+    }
+}
